@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rama ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(black, #200000);
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  margin-top: 40px;
+  color: red;
+  text-shadow: 0 0 20px red;
+}
+
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px;
+}
+
+.letter-btn {
+  background: black;
+  border: 2px solid red;
+  color: red;
+  padding: 20px 40px;
+  font-size: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.letter-btn:hover {
+  background: red;
+  color: black;
+  box-shadow: 0 0 20px red;
+}
+
+.section {
+  display: none;
+  padding: 30px;
+  margin: 20px;
+  border: 1px solid red;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.7);
+}
+
+.gallery img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 15px;
+  border: 2px solid red;
+}
+
+audio {
+  margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Rama ❤️</h1>
+
+<div class="letters">
+  <button class="letter-btn" onclick="openLetter('l1')">Letter 1 💌</button>
+  <button class="letter-btn" onclick="openLetter('l2')">Letter 2 📸</button>
+  <button class="letter-btn" onclick="openLetter('l3')">Letter 3 🎵</button>
+  <button class="letter-btn" onclick="openLetter('l4')">Letter 4 ❤️</button>
+</div>
+
+<!-- LETTER 1 -->
+<div id="l1" class="section">
+<h2>I Can Love You…</h2>
+
+<p><strong>1. I can love you for 4 days:</strong><br>
+Spring, Summer, Winter and Autumn.</p>
+
+<p><strong>2. Maybe 3 days:</strong><br>
+Yesterday, Today and Tomorrow.</p>
+
+<p><strong>3. How about 2 days:</strong><br>
+Morning and Night.</p>
+
+<p><strong>4. Maybe one day:</strong><br>
+Every day.</p>
+
+</div>
+
+<!-- LETTER 2 -->
+<div id="l2" class="section">
+<h2>Our Memories 📸</h2>
+
+<p>Add your photos below by replacing photo names.</p>
+
+<div class="gallery">
+  <img src="photo1.jpg">
+  <img src="photo2.jpg">
+  <img src="photo3.jpg">
+</div>
+
+<h3>Our Special Place 📍</h3>
+<p>Add your location here (example):</p>
+<p>California Sunset Beach 🌴</p>
+
+<!-- Optional Google Map Embed -->
+<!-- Replace the src link below with your Google Maps embed link -->
+<iframe 
+  src="https://www.google.com/maps/embed?pb="
+  width="300" height="200" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+
+</div>
+
+<!-- LETTER 3 -->
+<div id="l3" class="section">
+<h2>Our Songs 🎵</h2>
+
+<p>Add up to 5 songs below. Replace song1.mp3 etc.</p>
+
+<audio controls>
+  <source src="song1.mp3" type="audio/mpeg">
+</audio><br>
+
+<audio controls>
+  <source src="song2.mp3" type="audio/mpeg">
+</audio><br>
+
+<audio controls>
+  <source src="song3.mp3" type="audio/mpeg">
+</audio><br>
+
+<audio controls>
+  <source src="song4.mp3" type="audio/mpeg">
+</audio><br>
+
+<audio controls>
+  <source src="song5.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<!-- LETTER 4 -->
+<div id="l4" class="section">
+<h2>My Love Letter ❤️</h2>
+
+<p>
+Rama…<br><br>
+
+From the first moment I saw you,  
+I knew my life would never be the same.<br><br>
+
+You are my fire in the dark,  
+my calm in the chaos,  
+my forever choice.<br><br>
+
+I don’t promise you a perfect life…  
+But I promise you my heart.  
+Every day. Every night.  
+Forever.
+</p>
+
+</div>
+
+<script>
+function openLetter(id) {
+  var sections = document.querySelectorAll('.section');
+  sections.forEach(sec => sec.style.display = "none");
+  document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>
